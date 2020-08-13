@@ -1,5 +1,7 @@
 import os
 import tkinter as tk
+import subprocess
+import time
 
 root= tk.Tk()
 
@@ -9,6 +11,10 @@ canvas1.pack()
 label1 = tk.Label(root, text='Type Package:', bg = 'gray90')
 label1.config(font=('helvetica', 14))
 canvas1.create_window(175, 80, window=label1)
+
+label1 = tk.Label(root, text='©Copyright Hentai#8349 / Spicytakis', bg = 'gray90')
+label1.config(font=('helvetica', 10))
+canvas1.create_window(240, 390, window=label1)
 
 entry1 = tk.Entry (root, width=27)
 canvas1.create_window(175, 120, window=entry1)
@@ -31,6 +37,11 @@ def updatePip ():
     updatePipVar = 'python -m pip install --upgrade pip '
       
     os.system('start cmd /k ' + updatePipVar)
+
+    time.sleep(5)
+    
+    subprocess.call("taskkill /f /im cmd.exe", shell=True)
+
 
     
 button1 = tk.Button(text='      Install Package    ', command=installPackage, bg='green', fg='white', font=('helvetica', 12, 'bold'))
