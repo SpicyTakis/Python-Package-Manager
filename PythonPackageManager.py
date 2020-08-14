@@ -30,16 +30,19 @@ def installPackage():
 def installPackage_w_2020_resolver():
     global installPythonPackage
     installPythonPackage = 'python -m pip install --use-feature=2020-resolver ' + entry1.get()
+    os.system('start cmd /k ' + installPythonPackage)
 
 
 def installPackage_w_fast_deps():
     global installPythonPackage
     installPythonPackage = 'python -m pip install --use-feature=fast-deps ' + entry1.get()
+    os.system('start cmd /k ' + installPythonPackage)
 
 
 def installPackage_w_2020_resolver_and_fast_deps():
     global installPythonPackage
     installPythonPackage = 'python -m pip install --use-feature=2020-resolver --use-feature=fast-deps ' + entry1.get()
+    os.system('start cmd /k ' + installPythonPackage)
 
 
 def uninstallPackage():
