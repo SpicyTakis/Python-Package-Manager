@@ -63,22 +63,26 @@ def updatePip():
     subprocess.call("taskkill /f /im cmd.exe", shell=True)
 
 
-button1 = tk.Button(text='      Install Package    ', command=installPackage, bg='green', fg='white',
+button1 = tk.Button(text='Install Package',
+                    command=installPackage, bg='blue', fg='lime',
                     font=('helvetica', 12, 'bold'))
-canvas1.create_window(175, 200, window=button1)
+canvas1.create_window(175, 245, window=button1)
 
-button2 = tk.Button(text='      Install Package\nUsing Feature: 2020-resolver    ', command=installPackage_w_2020_resolver, bg='green',
+button2 = tk.Button(text='Install Package\nUsing Feature: 2020-resolver',
+                    command=installPackage_w_2020_resolver, bg='green',
                     fg='white',
                     font=('helvetica', 12, 'bold'))
 canvas1.create_window(175, 300, window=button2)
 
-button3 = tk.Button(text='    Install Package\nUsing Feature: fast-deps    ', command=installPackage_w_fast_deps, bg='green',
-                    fg='white',
+button3 = tk.Button(text='Install Package\nUsing Feature: fast-deps',
+                    command=installPackage_w_fast_deps, bg='aqua',
+                    fg='darkblue',
                     font=('helvetica', 12, 'bold'))
 canvas1.create_window(175, 365, window=button3)
 
-button4 = tk.Button(text='      Install Package\nUsing Feature: 2020-resolver & fast-deps   ', command=installPackage_w_2020_resolver_and_fast_deps,
-                    bg='green', fg='white',
+button4 = tk.Button(text='Install Package\nUsing Feature: 2020-resolver & fast-deps',
+                    command=installPackage_w_2020_resolver_and_fast_deps,
+                    bg='purple', fg='yellow',
                     font=('helvetica', 12, 'bold'))
 canvas1.create_window(175, 435, window=button4)
 
@@ -86,8 +90,8 @@ button5 = tk.Button(text='   Uninstall Package  ', command=uninstallPackage, bg=
                     font=('helvetica', 12, 'bold'))
 canvas1.create_window(175, 490, window=button5)
 
-button6 = tk.Button(text='         Update Pip         ', command=updatePip, bg='deep sky blue', fg='white',
+button6 = tk.Button(text='Update Pip', command=updatePip, bg='deep sky blue', fg='white',
                     font=('helvetica', 12, 'bold'))
-canvas1.create_window(175, 250, window=button6)
+canvas1.create_window(175, 200, window=button6)
 
 root.mainloop()
